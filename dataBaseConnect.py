@@ -34,3 +34,27 @@ class ConnecyMyDataBase:
         self.cursor.execute(query)
         self.cnx.commit()
         print("Dados inseridos com sucesso, na linha: " + str(linha))
+
+    def insert_table_IES(self, data, linha):
+        self.cursor = self.cnx.cursor()
+        print('Inserindo dados: ' + data)
+        query = 'INSERT INTO IES VALUES (' + data + ');'
+        self.cursor.execute(query)
+        self.cnx.commit()
+        print("Dados inseridos com sucesso, na linha: " + str(linha))
+
+    def insert_table_distrito(self, data, linha):
+        self.cursor = self.cnx.cursor()
+        print('Inserindo dados: ' + data)
+        query = 'INSERT INTO DISTRITOS VALUES (' + data + ');'
+        self.cursor.execute(query)
+        self.cnx.commit()
+        print("Dados inseridos com sucesso, na linha: " + str(linha))
+
+    def insert_table_cfs(self, data, linha):
+        self.cursor = self.cnx.cursor()
+        print('Inserindo dados: ' + data)
+        query = 'INSERT INTO CFS VALUES (' + data + ');'
+        self.cursor.execute(query)
+        self.cnx.commit()
+        print("Dados inseridos com sucesso, na linha: " + str(linha))
